@@ -3,7 +3,7 @@ from discord import app_commands
 from discord.ext import commands
 import os
 import random
-TOKEN = "Use o Token Aqui!"  
+TOKEN = "Use seu Token Aqui!"  
 
 intents = discord.Intents.default()
 intents.members = True
@@ -57,12 +57,42 @@ async def meme(ctx):
         await ctx.send(embed=embed , file=image)
 
 @bot.command()
-async def youtube(ctx): 
-    youtubers = [
-        "https://www.youtube.com/@a.d.i.s.s.a.u.r.o",
-        "https://www.youtube.com/@FamiRex"
-
-
+async def reciclar(ctx):
+    reciclar = [
+        "1. Lixeira Azul: Papel (jornais, revistas, folhas)",
+        "2. Lixeira Vermelha: Plástico (garrafas, sacolas, embalagens)",
+        "3. Lixeira Verde: Vidro (garrafas, potes, frascos)",
+        "4. Lixeira Amarela: Metal (latas, tampas, alumínio)",
+        "5. Lixeira Marrom: Orgânico (restos de comida, cascas, folhas)",
+        "6. Lixeira Cinza: Rejeitos (fraldas, papel higiênico, lixo sujo)"
     ]
-    await ctx.send(random.choice(youtubers))
-bot.run(Use o Token Aqui!")
+    recilar = "\n".join(reciclar)
+    await ctx.send((reciclar))
+
+@bot.command()
+async def ajudar(ctx):
+    ajudar = [
+        "Para ajudar o planeta com menos gases poluentes você pode", 
+        "1. Usar transporte público ou bicicleta", 
+        "2. Reduzir o consumo de energia elétrica", 
+        "3. Se possivel troque as lãmpadas incandescentes ou fluorescentes por LED",
+        "4. Compartilhe com outras pessoas essas informações",
+    ]
+    ajudar = "\n".join(ajudar)
+    await ctx.send((ajudar))
+
+
+@bot.command()
+async def perigo(ctx):
+    perigo = [
+      "Os perigos do aquecimento global incluem:", 
+       "1. Aumento do nível do mar, ameaçando comunidades costeiras", 
+       "2. Eventos climáticos extremos, como furacões e secas", 
+       "3. Perda de biodiversidade e habitats naturais", 
+       "4. Impactos na agricultura e segurança alimentar",
+    ]
+    perigo = "\n".join(perigo)
+    await ctx.send((perigo))
+
+
+bot.run("Use seu Token Aqui!!")
