@@ -67,7 +67,7 @@ async def reciclar(ctx):
         "6. Lixeira Cinza: Rejeitos (fraldas, papel higiênico, lixo sujo)"
     ]
     recilar = "\n".join(reciclar)
-    await ctx.send((reciclar))
+    await ctx.send(recilar)
 
 @bot.command()
 async def ajudar(ctx):
